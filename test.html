@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="title">今天心情不怎么好</p>
+		<button onclick="add_btn()">插入唱片</button>
+        <button onclick="del_btn()">删除</button>
+    </body>
+    <div>
+        <table id="table">
+            <tr>
+                <th class="no">id</th>
+                <th>名字</th>
+                <th>价格</th>
+            </tr>
+        </table>
+    </div>
+	<script>
+		var va = document.getElementById("title").innerHTML
+		function add_btn() {
+			var add = document.createElement("p")
+			add.textContent = va
+			document.getElementById("title").appendChild(add);
+		}
+		function del_btn() {
+			var list = document.getElementById("title")
+			list.removeChild(list.childNodes[0])
+		}
+	</script>
+</html>
